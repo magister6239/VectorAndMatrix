@@ -140,7 +140,7 @@ Matrix Matrix::operator*(Matrix const& other)
 		}
 	}
 
-	Matrix new_matrix = Matrix(3, arr_new);
+	Matrix new_matrix = Matrix(dim, arr_new);
 
 	for (int i = 0; i < dim; i++) {
 		delete[] arr_new[i];
