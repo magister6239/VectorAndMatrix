@@ -79,7 +79,7 @@ Vector Vector::operator*(Vector const& other)
 	if (dim != other.dim) cerr << "Error: Vectors are not same dimensional";
 
 	double* arr = new double[dim];
-	for (int i = 0; i < dim; i++) arr[i] = 1;
+	for (int i = 0; i < dim; i++) arr[i] = a[i] * other.a[i];
 
 	return Vector(dim, arr);
 }

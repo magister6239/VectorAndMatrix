@@ -24,5 +24,4 @@ public:
 	Matrix operator*(Matrix const& other);
 	Matrix operator*(double const& other);
 	Matrix operator=(Matrix const& other);
-
 };
