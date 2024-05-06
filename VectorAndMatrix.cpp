@@ -17,12 +17,18 @@ int main()
     Vector v4 = v1 - v2;
     Vector v5 = -v2;
     Vector v6 = v3 * 3;
+    Vector v7 = v3 * v4;
 
     v1.print();
     v2.print();
     v3.print();
     v4.print();
     v5.print();
+    v6.print();
+    v7.print();
+
+    v6 = v5;
+
     v6.print();
 
     double arr3[3][3] = {
@@ -66,6 +72,10 @@ int main()
     m4.print();
     m5.print();
     m6.print();
+    m7.print();
+
+    m7 = m5;
+
     m7.print();
 
     return 0;

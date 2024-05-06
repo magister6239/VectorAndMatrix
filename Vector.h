@@ -23,7 +23,7 @@ public:
 	Vector operator-();
 	Vector operator*(Vector const& other);
 	Vector operator*(double const& other);
-	Vector operator=(Vector const& other);
+	Vector& operator=(Vector const& other);
 
 	const double operator[](unsigned index) const;
 };

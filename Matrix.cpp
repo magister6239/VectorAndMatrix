@@ -173,33 +173,28 @@ Matrix Matrix::operator*(double const& other)
 	return new_matrix;
 }
 
-Matrix Matrix::operator=(Matrix const& other)
+Matrix& Matrix::operator=(Matrix const& other)
 {
 	if (this == &other) {
 		cerr << "Error: Equivalent objects" << endl;
 		return *this;
 	}
 
-	for (int i = 0; i < dim; i++) {
-		delete[] a[i];
+	for (int i = 0; i < this->dim; i++) {
+		delete[] this->a[i];
 	}
 
-	delete[] a;
+	delete[] this->a;
 
-	dim = other.dim;
-	double** a = new double* [dim];
+	this->dim = other.dim;
+	this->a = new double* [this->dim];
 
-	for (int i = 0; i < dim; i++) {
-		a[i] = new double[dim];
-		for (int j = 0; j < dim; j++) {
-			a[i][j] = other.a[i][j];
+	for (int i = 0; i < this->dim; i++) {
+		this->a[i] = new double[this->dim];
+		for (int j = 0; j < this->dim; j++) {
+			this->a[i][j] = other.a[i][j];
 		}
 	}
 
 	return *this;
 }
-
-
-
-
-

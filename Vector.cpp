@@ -92,16 +92,16 @@ Vector Vector::operator*(double const& n)
 	return Vector(dim, arr);
 }
 
-Vector Vector::operator=(Vector const& other)
+Vector& Vector::operator=(Vector const& other)
 {
 	if (this == &other) {
 		cerr << "Error: Equivalent objects" << endl;
 		return *this;
 	}
 
-	dim = other.dim;
-	double* arr = new double[dim];
-	for (int i = 0; i < dim; ++i) arr[i] = other.a[i];
+	this->dim = other.dim;
+	this->a = new double[dim];
+	for (int i = 0; i < dim; ++i) this->a[i] = other.a[i];
 
 	return *this;
 }
