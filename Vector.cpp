@@ -100,6 +100,9 @@ Vector& Vector::operator=(Vector const& other)
 	}
 
 	this->dim = other.dim;
+
+	delete this->a;
+
 	this->a = new double[dim];
 	for (int i = 0; i < dim; ++i) this->a[i] = other.a[i];
 
